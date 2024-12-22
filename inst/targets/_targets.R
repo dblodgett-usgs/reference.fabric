@@ -184,7 +184,7 @@ list(
   targets::tar_target(rf_merge_vpu,
     reference.fabric::rf.targets.merge_vpu(rf_merge_info),
     pattern = map(rf_merge_info),
-    format = "file"
+    format = "file", deployment = "worker"
   ),
   targets::tar_target(rf_merge_conus,
     reference.fabric::rf.targets.merge_conus(rf_merge_info),
