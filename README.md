@@ -25,3 +25,20 @@ options in a `.Rprofile` file in the project directory
 the workflow will be executed from. Using this approach,
 the new callr environment will load the desired options
 at startup.
+
+## Development
+
+A suggested `.Rprofile` to be used during package development is included below. 
+Replace "..." with your own values. 
+
+```r
+library(targets)
+
+tar_config_set(script = "inst/targets/_targets.R")
+tar_option_set(error = "null", debug = "...")
+options(
+  rf.config.dir.base = "...",
+  rf.config.file.nhdplus = "...",
+  rf.config.file.enhd = "..."
+)
+```
